@@ -1,21 +1,14 @@
 const inquirer = require('inquirer')
-const managerPrompt = require('./src/utils/managerPrompt')
 const fs = require('fs')
 const path = require('path')
 
-console.log('Welcome to Team Profile Generator')
-
-inquirer.prompt(questions).then((data) => {
-	const filename = 'index.html'
-})
-
-// import classes
-const Manager = require('./lib/manager')
-const Engineer = require('./lib/engineer')
-const Intern = require('./lib/intern')
+const joinTeam = require('./src/utils/joinTeam')
+const managerPrompt = require('./src/utils/managerPrompt')
+const teamArr = []
 
 function startPrompt() {
-	managerPrompt()
+	const managerDetails = managerPrompt()
+	teamArr.push(managerDetails)
 }
 
 startPrompt()

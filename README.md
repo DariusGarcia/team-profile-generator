@@ -2,12 +2,17 @@
 
 ## Description
 
+Team Profile Generator is a Node.js app that lets users create a team profile that outputs a static HTML file.
+Users are prompted to answer details about themselves and their work environment.
+
 ## Usage
 
 - Run node index.js to start program.
 - Answer to prompts and select the options available to generate a webpage displaying the user details.
 
 ## License
+
+MIT License
 
 ## Installation
 

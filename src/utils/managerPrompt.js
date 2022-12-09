@@ -32,26 +32,9 @@ function managerPrompt() {
 			managerData.email,
 			managerData.office
 		)
+		console.log('manager prompt details: ' + manager.name + ' ' + manager.email)
 		return manager
 	})
 }
 
 module.exports = managerPrompt
-
-// {
-//   type: "checkbox",
-//   message: "Select what level you are:",
-//   name: "occupation",
-
-//   choices: ["Engineer", "Intern", "Manager"],
-// },
-// {
-//   type: "input",
-//   message: "Enter your email:",
-//   name: "email",
-// },
-// {
-//   type: "input",
-//   message: "Enter your GitHub username:",
-//   name: "github",
-// },
