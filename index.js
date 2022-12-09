@@ -1,13 +1,21 @@
 const inquirer = require('inquirer')
-const questions = require('./src/utils/questions')
+const managerPrompt = require('./src/utils/managerPrompt')
 const fs = require('fs')
+const path = require('path')
 
 console.log('Welcome to Team Profile Generator')
 
 inquirer.prompt(questions).then((data) => {
 	const filename = 'index.html'
-
-	fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-		err ? console.log(err) : console.log('Success!')
-	)
 })
+
+// import classes
+const Manager = require('./lib/manager')
+const Engineer = require('./lib/engineer')
+const Intern = require('./lib/intern')
+
+function startPrompt() {
+	managerPrompt()
+}
+
+startPrompt()
